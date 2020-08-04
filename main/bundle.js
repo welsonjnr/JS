@@ -1,28 +1,18 @@
 "use strict";
 
-var arr = [1, 3, 4, 5, 9, 8, 7]; //Arrow Functions -> Função anônima
-//Um parâmetro pode se remover as parênteses da função
-
-/*const newArr = arr.map(item=>{
-    return item * 2
-})*/
-//Quando for retornar algo simples e não um corpo de função pode tirar o return
-//Quando for passar um único parâmetro é muito recomendado usar arrow function
-//-----const newArr = arr.map(item=>item * 2)
-//Não pode passar objeto para a arrow poís as chaves servem para o corpo da função
-//-----const teste = () => {nome:'João'}
-
-/* Assim funcionaria
-const teste = () => {
-    return {nome: 'Diego'}
+function soma() {
+  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
+  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 6;
+  return a + b;
 }
-*/
-//Para contornar o problema é so utilizar dessa forma ({ dados })
 
-var teste = function teste() {
-  return {
-    nome: 'João'
-  };
+var sum = function sum() {
+  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
+  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 6;
+  return a + b;
 };
 
-console.log(teste);
+console.log(soma(1));
+console.log(soma());
+console.log(sum(0));
+console.log(sum(2));
