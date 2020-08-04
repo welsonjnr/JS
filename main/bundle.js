@@ -1,27 +1,28 @@
 "use strict";
 
-var arr = [1, 3, 4, 5, 9, 8, 7]; //Map
-//Percorre o vetor e executa a ação desejada
+var arr = [1, 3, 4, 5, 9, 8, 7]; //Arrow Functions -> Função anônima
+//Um parâmetro pode se remover as parênteses da função
 
-var newArr = arr.map(function (item, index) {
-  return item + index;
-});
-console.log(newArr); //Reduce
-//Pega tudo e transforma em uma única informação 
+/*const newArr = arr.map(item=>{
+    return item * 2
+})*/
+//Quando for retornar algo simples e não um corpo de função pode tirar o return
+//Quando for passar um único parâmetro é muito recomendado usar arrow function
+//-----const newArr = arr.map(item=>item * 2)
+//Não pode passar objeto para a arrow poís as chaves servem para o corpo da função
+//-----const teste = () => {nome:'João'}
 
-var sum = arr.reduce(function (total, next) {
-  return total + next;
-});
-console.log(sum); //Serve para filtrar o array, tipo pegar só os pares ou apenas os impares
+/* Assim funcionaria
+const teste = () => {
+    return {nome: 'Diego'}
+}
+*/
+//Para contornar o problema é so utilizar dessa forma ({ dados })
 
-var filter = arr.filter(function (item) {
-  //Ela obrigatóriamente precisa retornar true ou false  
-  return item % 2 === 0;
-});
-console.log(filter); //Find
-//Verificar uma informação dentro de um array
+var teste = function teste() {
+  return {
+    nome: 'João'
+  };
+};
 
-var find = arr.find(function (item) {
-  return item === 4;
-});
-console.log(find);
+console.log(teste);

@@ -1,33 +1,27 @@
 const arr = [1,3,4,5,9,8,7]
 
-//Map
-//Percorre o vetor e executa a ação desejada
-const newArr = arr.map(function(item, index){
-    return item + index
-})
+//Arrow Functions -> Função anônima
+//Um parâmetro pode se remover as parênteses da função
 
-console.log(newArr)
+/*const newArr = arr.map(item=>{
+    return item * 2
+})*/
 
-//Reduce
-//Pega tudo e transforma em uma única informação 
-const sum = arr.reduce(function(total, next){
-    return total+next
-})
+//Quando for retornar algo simples e não um corpo de função pode tirar o return
+//Quando for passar um único parâmetro é muito recomendado usar arrow function
 
-console.log(sum)
+//-----const newArr = arr.map(item=>item * 2)
 
-//Serve para filtrar o array, tipo pegar só os pares ou apenas os impares
-const filter = arr.filter(function(item){
-//Ela obrigatóriamente precisa retornar true ou false  
-    return item % 2 === 0
-})
+//Não pode passar objeto para a arrow poís as chaves servem para o corpo da função
 
-console.log(filter)
+//-----const teste = () => {nome:'João'}
 
-//Find
-//Verificar uma informação dentro de um array
-const find = arr.find(function(item){
-    return item === 4
-})
+/* Assim funcionaria
+const teste = () => {
+    return {nome: 'Diego'}
+}
+*/
 
-console.log(find)
+//Para contornar o problema é so utilizar dessa forma ({ dados })
+const teste = () => ({nome: 'João'})
+console.log(teste)
