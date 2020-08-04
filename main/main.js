@@ -1,29 +1,9 @@
-class List{
-    constructor(){
-        this.data = []
-    }
-
-    add(data){
-        this.data.push(data)
-        console.log(this.data)
+class Matematica{
+//Método estático não consegue ver o restante da classe, 
+//ocasionando a não utilização do constructor
+    static soma(a, b){
+        return a + b
     }
 }
 
-class TodoList extends List{
-    constructor(){
-        super()
-
-        this.usuario = 'Diego'
-    }
-    mostraUsuario(){
-        console.log(this.usuario)
-    }
-}
-
-const MinhaLista = new TodoList()
-
-document.getElementById('novotodo').onclick=function(){
-    MinhaLista.add('Novo todo')
-}
-
-MinhaLista.mostraUsuario()
+console.log(Matematica.soma(1, 2))
