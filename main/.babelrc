@@ -1,0 +1,5 @@
+//Configurando o babel
+//preset-env vai entender qual ambiente eu estou trabalhando(Para configurar da melhor forma para trabalhar), tipo node, browser e outros.
+{
+    "presets": ["@babel/preset-env"]
+}
