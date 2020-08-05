@@ -1,8 +1,21 @@
-//Template Literals incluir variáveis em strings
+const nome = 'Enzo'
+const idade = 10
 
-const nome = 'Gabriel'
-const idade = 23
+//Modelo antigo
+const usuario1 = {
+    nome: nome,
+    idade: idade,
+    empresa: 'Netflix'
+}
 
-console.log('Meu nome é ' + nome + ' e tenho ' + idade + ' anos')
+console.log(usuario1)
 
-console.log(`Meu nome é ${nome} e tenho ${idade} anos.`)
+//Object Short Syntax
+
+const usuario = {
+    nome,
+    idade,
+    empresa: 'Netflix'
+}
+
+console.log(usuario)

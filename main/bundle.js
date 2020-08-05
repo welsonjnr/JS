@@ -1,7 +1,18 @@
 "use strict";
 
-//Template Literals incluir variáveis em strings
-var nome = 'Gabriel';
-var idade = 23;
-console.log('Meu nome é ' + nome + ' e tenho ' + idade + ' anos');
-console.log("Meu nome \xE9 ".concat(nome, " e tenho ").concat(idade, " anos."));
+var nome = 'Enzo';
+var idade = 10; //Modelo antigo
+
+var usuario1 = {
+  nome: nome,
+  idade: idade,
+  empresa: 'Netflix'
+};
+console.log(usuario1); //Object Short Syntax
+
+var usuario = {
+  nome: nome,
+  idade: idade,
+  empresa: 'Netflix'
+};
+console.log(usuario);
