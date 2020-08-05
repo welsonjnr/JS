@@ -1,5 +1,7 @@
 //Configurando o babel
 //preset-env vai entender qual ambiente eu estou trabalhando(Para configurar da melhor forma para trabalhar), tipo node, browser e outros.
+//plugin proposal object rest spread, serve para utilizar o rest e o spread -> ...
 {
     "presets": ["@babel/preset-env"]
+    , "plugins": ["@babel/plugin-proposal-object-rest-spread"]
 }
