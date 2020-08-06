@@ -1,21 +1,14 @@
-const minhaPromise = () => new Promise((resolve, reject) => {
-    setTimeout(() => {resolve('OK')}, 2000)
-})
+import axios from 'axios'
 
-//As Promisses garatem que um método espere até o outro ser executado para que o 
-//Posterior tambem seja executado.
-
-/*
-async function executaPromise(){
-    console.log(await minhaPromise())
-    console.log(await minhaPromise())
-    console.log(await minhaPromise())
+class Api{
+    static async getUserInfo(username){
+        try{
+        const response = await axios.get(`https://api.github.com/users/${username}`)
+        } catch (err){
+            console.warn('Erro na API')
+        }
+        console.log(response)
+    }
 }
 
-executaPromise()*/
-//Promisse com Arrow Function
-const executaPromise = async () => {
-    console.log(await minhaPromise())
-    console.log(await minhaPromise())
-    console.log(await minhaPromise())
-}
+Api.getUserInfo('Jackes07')
